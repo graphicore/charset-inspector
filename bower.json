@@ -1,0 +1,20 @@
+{
+  "name": "charset-inspector",
+  "version": "0.0.1",
+  "authors": [
+    "Lasse Fister <commander@graphicore.de>"
+  ],
+  "description": "Compare character sets, use unicode as guide.",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "GPLv3",
+  "dependencies": {
+    "requirejs": "~2.1.20",
+    "requirejs-domready": "~2.0.1",
+    "text": "requirejs-text#~2.0.14",
+    "unicode-tools": "graphicore/unicode-tools",
+    "marked": "~0.3.5",
+    "opentype.js": "~0.5.1"
+  }
+}

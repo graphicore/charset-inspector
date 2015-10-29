@@ -1,0 +1,284 @@
+@font-face {
+    font-family: Amiri;
+    font-style: normal;
+    font-weight: 400;
+    /* the webfonts are subsetted too much for our purpose */
+    src: url("./amiri-regular.ttf") format("truetype");
+}
+
+
+html {
+    font-family: Ubuntu, Calibri, sans-serif;
+}
+
+h2 {
+ font-size: 1.4em;
+}
+h3 {
+ font-size: 1.2em;
+}
+
+.ctrl, .legend{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: .5em;
+}
+
+.ctrl {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+.ctrl > .form,
+.legend > dl {
+    margin: .5em 0;
+}
+
+
+.ctrl.hidden .source,
+.ctrl.hidden .update,
+.ctrl.hidden * {
+    display: none;
+}
+.ctrl.hidden .heading {
+    display: block;
+}
+
+.ctrl .source h3 {
+    margin-top: 0;
+}
+
+.ctrl .heading {
+    margin: 0
+}
+
+.ctrl .source {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 20em;
+    margin-right: 2em;
+}
+
+.ctrl .source.debit /*last .source */{
+    margin-right: 0;
+}
+
+.ctrl > .form,
+.ctrl button.update,
+.legend.hidden .heading,
+.ctrl.hidden .heading {
+    background: #EEE;
+}
+
+.legend.hidden:hover .heading,
+.ctrl.hidden:hover .heading {
+    background: #999;
+}
+
+.legend .heading,
+.ctrl .heading {
+    background: #999;
+}
+.legend .heading:hover,
+.ctrl .heading:hover {
+    background: #EEE;
+}
+
+.ctrl > .form,
+.ctrl .heading,
+.ctrl button.update,
+.legend .heading {
+    padding: .4em;
+    border: 2px solid #CCC;
+    color: black;
+}
+
+.ctrl button.update {
+    display: block;
+    font-weight: bold;
+    margin: 1.3em 0 0 0;
+    width: 100%;
+}
+
+.ctrl button.update:hover {
+    background: #999;
+}
+
+.ctrl .source-type {
+    padding: .5em 0 .5em 1.5em;
+    position: relative;
+    border-bottom: 2px dashed #CCC;
+}
+.ctrl .source-type:last-child {
+    border-bottom: none;
+}
+
+.ctrl .source-type > *,
+.ctrl .source-type p {
+    display: block;
+    margin: 0;
+}
+
+.ctrl .source-type > input {
+    left: 0;
+    position: absolute;
+    top: 0.75em;
+    margin: 0;
+}
+
+.ctrl .source-type.file .file-input .label {
+    color: #777;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.ctrl .source-type.file .file-input{
+    padding: .5em;
+    border: 2px solid #CCC;
+    background: #F8F8F8;
+
+}
+
+
+.legend .heading {
+    cursor: pointer;
+    margin: 0;
+    display: inline-block;
+    min-width: 7em;
+    text-align: center;
+}
+
+.ctrl .heading::before,
+.legend .heading::before{
+    content: 'Hide ';
+    font-weight: normal;
+}
+
+.ctrl.hidden .heading::before,
+.legend.hidden .heading::before {
+    content: 'Show ';
+}
+
+.legend dl {
+    line-height: 1.5em;
+}
+
+.legend.hidden dl {
+    display: none;
+}
+
+.legend dt {
+    min-width: 12em;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.legend dd {
+    display: inline;
+    margin-left: 0.3em;
+}
+
+.legend dl > *{
+    margin-bottom: 3px;
+}
+
+.legend dd::after {
+    content: " ";
+    display: block;
+}
+
+
+
+.code-block caption {
+    text-align: left;
+    margin: 1em 0 .7em;
+    white-space: nowrap;
+    font-size: 1.4em;
+}
+
+.code-block th {
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+.code-block tbody th {
+    min-width: 3em;
+}
+
+
+.code-block td {
+    border: 1px solid black;
+}
+
+.code-block td > *{
+    display: block;
+    text-align: center;
+}
+
+.code-block td .char-view {
+    font-family:Amiri, sans-serif;
+    min-height: 2.5em;
+    line-height: 2.5em;
+    font-weight: 400;
+    font-style: normal;
+    width: 3em;
+    overflow-x: hidden;
+}
+
+.code-block td{
+    width: 3em;
+}
+
+.code-block td  em {
+    border-top: 1px dashed black;
+    font-style: normal;
+}
+
+
+/* color codes */
+
+.code-block td.not-def,
+.legend .not-def
+ {
+    background: #CCC;
+}
+/* Either the not-def class is bad because the unicode library is not fully
+ * implemented (cjk, pua, etc.) or a char is defined which is not in unciode.
+ *
+ * Repeating the "not-def" to achieve a higher specificity than td.debit.credit
+ */
+.code-block td.not-def.not-def.debit,
+.legend .not-def.not-def.debit
+{
+    background: RoyalBlue;
+}
+.code-block td.not-def.not-def.credit,
+.legend .not-def.not-def.credit
+{
+    background: Crimson;
+}
+.code-block td.not-def.not-def.credit.debit,
+.legend .not-def.not-def.credit.debit
+{
+    background: SeaGreen;
+}
+
+
+.code-block td.debit,
+.legend .debit
+{
+    background: PaleTurquoise;
+}
+.code-block td.credit,
+.legend .credit
+{
+    background: LightCoral;
+}
+.code-block td.debit.credit,
+.legend .debit.credit
+{
+    background: PaleGreen;
+}
+

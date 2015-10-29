@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Character Set Inspector</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+    <script src="./bower_components/requirejs/require.js"></script>
+    <script>
+    define('setup',[], function() {
+        // example setup
+        return {
+            showControls: false // default True
+          , showLegend: false // // default True
+          , dropDownFiles: {
+                // [[array of filenames], slected index]
+                credit: [
+                    [
+                        'example-encodings/arabic_unique-glyphs.nam'
+                      , 'example-encodings/cyrillic-ext_unique-glyphs.nam'
+                      , 'example-encodings/cyrillic_unique-glyphs.nam'
+                      , 'example-encodings/devanagari_unique-glyphs.nam'
+                      , 'example-encodings/greek-ext_unique-glyphs.nam'
+                      , 'example-encodings/greek_unique-glyphs.nam'
+                      , 'example-encodings/hebrew_unique-glyphs.nam'
+                      , 'example-encodings/khmer_unique-glyphs.nam'
+                      , 'example-encodings/lao_unique-glyphs.nam'
+                      , 'example-encodings/latin-ext_unique-glyphs.nam'
+                      , 'example-encodings/latin_unique-glyphs.nam'
+                      , 'example-encodings/myanmar_unique-glyphs.nam'
+                      , 'example-encodings/telugu_unique-glyphs.nam'
+                      , 'example-encodings/vietnamese_unique-glyphs.nam'
+                    ]
+                  , 0 //selected item, if one should be selected, else leave blank
+                ]
+                // same structure as credit
+                , debit: [
+                    [
+                        'example-encodings/block.ucd'
+                      , 'example-encodings/amiri.ucd'
+
+                    ]
+                  , 1
+                ]
+            }
+        };
+    });
+    require(['./lib/config.js'], function(){
+        require(['charset-inspector/main']);
+    });
+    </script>
+</head>
+<body>
+    <h1>Character Set Inspector</h1>
+    <p>Visualize and compare unicode encoded character sets.</p>
+    <main></main>
+    <footer>
+    <h2>Free/Libre Open Source</h2>
+        <p>GPL v3. For source code, bug reports, feature requests or more information check out
+        <a href="https://github.com/graphicore/charset-inspector">the repository at GitHub</a>.</p>
+    </footer>
+</body>
+</html>

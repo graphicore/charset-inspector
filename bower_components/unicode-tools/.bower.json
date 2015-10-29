@@ -1,0 +1,13 @@
+{
+  "name": "unicode-tools",
+  "homepage": "https://github.com/graphicore/unicode-tools",
+  "_release": "f4537a6eb6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f4537a6eb6c7d7dd3e36606f140990ea1bb3b2c1"
+  },
+  "_source": "git://github.com/graphicore/unicode-tools.git",
+  "_target": "*",
+  "_originalSource": "graphicore/unicode-tools"
+}

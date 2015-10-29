@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Character Set Inspector</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+    <script src="./bower_components/requirejs/require.js"></script>
+    <script>
+    require(['./lib/config.js'], function(){
+        require(['charset-inspector/main']);
+    });
+    </script>
+</head>
+<body>
+    <h1>Character Set Inspector</h1>
+    <p>Visualize and compare unicode encoded character sets.</p>
+    <main></main>
+    <footer>
+    <h2>Free/Libre Open Source</h2>
+        <p>GPL v3. For source code, bug reports, feature requests or more information check out
+        <a href="https://github.com/graphicore/charset-inspector">the repository at GitHub</a>.</p>
+    </footer>
+</body>
+</html>
