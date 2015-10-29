@@ -16,5 +16,21 @@
     "unicode-tools": "graphicore/unicode-tools",
     "marked": "~0.3.5",
     "opentype.js": "~0.5.1"
-  }
+  },
+  "homepage": "https://github.com/graphicore/charset-inspector",
+  "main": "lib/CharInspectorController.js",
+  "keywords": [
+    "unicode",
+    "blocks",
+    "visualization",
+    "fonts",
+    "charsets"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
